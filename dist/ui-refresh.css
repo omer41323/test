@@ -23,3 +23,5 @@
 
 /* Header order: navigation on the right, brand on the left; text stays RTL. */
 .studio-shell .site-header{flex-direction:row-reverse}
+
+.activity-notice{max-width:1240px;margin:12px auto;padding:12px 24px;font-size:11px;line-height:1.8;color:#64716a}

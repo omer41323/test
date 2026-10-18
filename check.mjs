@@ -11,7 +11,7 @@ import {sources,chapters} from './dist/reference.js';
 const app=fs.readFileSync(new URL('./dist/app.js',import.meta.url),'utf8');
 const nodes=new Map();
 const document={querySelector(key){if(!nodes.has(key))nodes.set(key,{innerHTML:'',style:{},clientWidth:1060});return nodes.get(key)},querySelectorAll(){return[]}};
-const c=vm.createContext({document,basicLessons,toyProject,toyGeometry,toySpots,extraProjects,projectCatalog,extraGeometry,extraSpots,planetaryProject,planetaryCatalog,planetaryGeometry,planetarySpots,planetaryId,foundationIds,foundationsComplete,gearProject,gearGeometry,gearSpots,sources,chapters,localStorage:{getItem(){return'{}'}},applyFit(){},highlight(){},console});
+const c=vm.createContext({document,basicLessons,toyProject,toyGeometry,toySpots,extraProjects,projectCatalog,extraGeometry,extraSpots,planetaryProject,planetaryCatalog,planetaryGeometry,planetarySpots,planetaryId,foundationIds,foundationsComplete,gearProject,gearGeometry,gearSpots,sources,chapters,progressStorage:{getItem(){return'{}'}},logActivity(){},applyFit(){},highlight(){},console});
 vm.runInContext(app.replace(/^import .*;$/gm,'').split('function applyFit()')[0],c);
 let count=0;
 for(let l=0;l<lessons.length;l++){

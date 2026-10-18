@@ -1,0 +1,11 @@
+{
+  "name": "fusion-click-guide-he",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node check.mjs"
+  },
+  "engines": {
+    "node": ">=22"
+  }
+}
